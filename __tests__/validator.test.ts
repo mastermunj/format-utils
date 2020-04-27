@@ -110,3 +110,21 @@ describe('ESIC', () => {
     expect(Validator.esic(value)).toBe(expected);
   });
 });
+
+describe('IMEI', () => {
+  const tests: [string, boolean][] = [
+    ['49-015420-323751-8', true],
+    ['490154203237518', true],
+    ['356938035643809', true],
+
+    ['49-015420-323751-9', false],
+    ['490154203237519', false],
+    ['4901542032375191', false],
+    ['49015420323751', false],
+    ['a49015420323751', false],
+    ['49015420323751a', false],
+  ];
+  test.each(tests)(`Check %s => %s`, (value, expected) => {
+    expect(Validator.imei(value)).toBe(expected);
+  });
+});

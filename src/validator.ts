@@ -1,3 +1,5 @@
+import { Luhn } from './luhn';
+
 export class Validator {
   static mobile(value: string): boolean {
     return /^[6789]\d{9}$/.test(value);
@@ -25,5 +27,10 @@ export class Validator {
 
   static esic(value: string): boolean {
     return /^\d{17}$/.test(value);
+  }
+
+  static imei(value: string): boolean {
+    value = value.replace(/[\s-]+/g, '');
+    return /^\d{15}$/.test(value) && Luhn.validate(value);
   }
 }
