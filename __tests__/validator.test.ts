@@ -180,4 +180,8 @@ describe('GST', () => {
   test.each(tests)(`Check %s => %s`, (value, expected) => {
     expect(Validator.gst(value)).toBe(expected);
   });
+
+  test.each(tests)(`Check GST Checksum %s => %s`, (value, expected) => {
+    expect(Validator.gstChecksum(value)).toBe(expected);
+  });
 });
