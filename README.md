@@ -201,3 +201,23 @@ let isValid = Validator.gst('22ALJPT5243L1ZS');
 isValid = Validator.gst('22ALJPT5243L1ZB');
 // isValid = false
 ```
+
+### Vehicle Registration (Number Plate)
+
+A vehicle number plate is an alphanumeric code assigned to a vehicle registered in India.
+
+The current format of the registration index consists of 4 parts.
+
+#### Format
+* The first two characters are alphanumeric code of the State / Union Territory where the vehicle is registered.
+* The third & fourth characters the sequential number of a district.
+* The third part consists of one, two or three letters or no letters at all.
+* The fourth part is a number from 1 to 9999, unique to each plate.
+
+```js
+let isValid = Validator.vehicleRegistration('DL4CAF4943');
+// isValid = true
+
+isValid = Validator.vehicleRegistration('DL4CAF494G');
+// isValid = false
+```

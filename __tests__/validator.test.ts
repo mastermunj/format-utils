@@ -185,3 +185,20 @@ describe('GST', () => {
     expect(Validator.gstChecksum(value)).toBe(expected);
   });
 });
+
+describe('Vehicle Registration Number', () => {
+  const tests: [string, boolean][] = [
+    ['DL4CAF4943', true],
+    ['GJ5CL2213', true],
+    ['GJ 5 CL 2213', true],
+    ['KL 01 CK 1', true],
+    ['TN 58 N 4006', true],
+
+    ['DL4CAF494G', false],
+    ['DL4CANF4943', false],
+    ['1DL4CAF4943', false],
+  ];
+  test.each(tests)(`Check %s => %s`, (value, expected) => {
+    expect(Validator.vehicleRegistration(value)).toBe(expected);
+  });
+});

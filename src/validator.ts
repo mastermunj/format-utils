@@ -68,4 +68,9 @@ export class Validator {
     const checksum = (chars.length - (sum % chars.length)) % chars.length;
     return chars[checksum] === lastChar;
   }
+
+  static vehicleRegistration(value: string): boolean {
+    const regex = /^[A-Z]{2}[\s-.]?[0-9]{1,2}[\s-.]?[0-9A-Z]{1,3}[\s-.]?[0-9]{1,4}$/i;
+    return regex.test(value);
+  }
 }
