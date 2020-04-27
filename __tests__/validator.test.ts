@@ -128,3 +128,37 @@ describe('IMEI', () => {
     expect(Validator.imei(value)).toBe(expected);
   });
 });
+
+describe('Aadhaar', () => {
+  const tests: [string, boolean][] = [
+    ['234567890124', true],
+    ['987654321096', true],
+
+    ['a87654321096', false],
+    ['98765432109a', false],
+    ['087654321096', false],
+    ['187654321096', false],
+    ['9876543210967', false],
+    ['98765432109', false],
+  ];
+  test.each(tests)(`Check %s => %s`, (value, expected) => {
+    expect(Validator.aadhaar(value)).toBe(expected);
+  });
+});
+
+describe('Aadhaar VID', () => {
+  const tests: [string, boolean][] = [
+    ['9876543210987659', true],
+    ['6234897234982733', true],
+
+    ['9876543210987656', false],
+    ['6234897234982734', false],
+    ['a876543210987659', false],
+    ['987654321098765a', false],
+    ['987654321098765', false],
+    ['98765432109876591', false],
+  ];
+  test.each(tests)(`Check %s => %s`, (value, expected) => {
+    expect(Validator.aadhaarVID(value)).toBe(expected);
+  });
+});

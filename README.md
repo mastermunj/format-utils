@@ -153,3 +153,32 @@ isValid = Validator.imei('490154203237519');
 // isValid = false
 ```
 
+### AADHAAR
+
+Aadhaar is a 12 digit numberic code that can be obtained by residents or passport holders of India, based on their biometric and demographic data.
+
+#### Format
+* The first character is a number between `2` and `9`.
+* The second to eleventh characters are random numbers.
+* The twelfth character is a Verhoeff check digit.
+
+```js
+let isValid = Validator.aadhaar('234567890124');
+// isValid = true
+
+isValid = Validator.aadhaar('187654321096');
+// isValid = false
+```
+
+### AADHAAR VID (Aadhaar Virtual ID)
+
+Aadhaar VID is a 16 digit numberic code that can be used instead of Aadhaar number at the time of authentication to avoid sharing of Aadhaar number.
+The last digit is a Verhoeff check digit.
+
+```js
+let isValid = Validator.aadhaarVID('9876543210987659');
+// isValid = true
+
+isValid = Validator.aadhaarVID('6234897234982734');
+// isValid = false
+```

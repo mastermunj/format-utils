@@ -1,4 +1,5 @@
 import { Luhn } from './luhn';
+import { Verhoeff } from './verhoeff';
 
 export class Validator {
   static mobile(value: string): boolean {
@@ -32,5 +33,15 @@ export class Validator {
   static imei(value: string): boolean {
     value = value.replace(/[\s-]+/g, '');
     return /^\d{15}$/.test(value) && Luhn.validate(value);
+  }
+
+  static aadhaar(value: string): boolean {
+    value = value.replace(/[\s-]+/g, '');
+    return /^[2-9]\d{11}$/.test(value) && Verhoeff.validate(value);
+  }
+
+  static aadhaarVID(value: string): boolean {
+    value = value.replace(/[\s-]+/g, '');
+    return /^\d{16}$/.test(value) && Verhoeff.validate(value);
   }
 }
