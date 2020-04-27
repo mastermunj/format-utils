@@ -140,4 +140,16 @@ isValid = Validator.esic('1234567890123456');
 // isValid = false
 ```
 
+### IMEI (International Mobile Equipment Identity)
+
+A IMEI is a 15 digit numeric code to identify mobile phones, as well as some satellite phones.
+The last digit of IMEI is a Luhn check digit.
+
+```js
+let isValid = Validator.imei('490154203237518');
+// isValid = true
+
+isValid = Validator.imei('490154203237519');
+// isValid = false
+```
 
