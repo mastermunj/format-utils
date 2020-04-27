@@ -1,7 +1,7 @@
 {
   "name": "format-utils",
   "version": "0.0.0",
-  "description": "Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAR, UID and more!",
+  "description": "Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAR, GST and more!",
   "keywords": [
     "format validators",
     "mobile",
