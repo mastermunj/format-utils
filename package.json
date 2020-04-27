@@ -11,6 +11,8 @@
     "clean": "rimraf dist coverage",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "npm run lint -- --fix",
+    "release": "standard-version",
+    "release:mock": "npm run release -- --dry-run",
     "test": "jest --detectOpenHandles --coverage",
     "test:watch": "npm run test -- --watch"
   },
@@ -42,6 +44,7 @@
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.42.1",
+    "standard-version": "^7.1.0",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
   }
