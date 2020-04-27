@@ -44,4 +44,28 @@ export class Validator {
     value = value.replace(/[\s-]+/g, '');
     return /^\d{16}$/.test(value) && Verhoeff.validate(value);
   }
+
+  static gst(value: string): boolean {
+    const regex = /^([0-2][0-9]|[3][0-7])[A-Z]{3}[ABCFGHLJPTK][A-Z]\d{4}[A-Z][A-Z0-9][Z][A-Z0-9]$/i;
+    return regex.test(value) && Validator.gstChecksum(value);
+  }
+
+  static gstChecksum(value: string): boolean {
+    if (!/^[0-9A-Z]{15}$/i.test(value)) {
+      return false;
+    }
+    const chars = [...'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+    const values = [...value.toUpperCase()];
+    const lastChar = values.pop();
+    const sum = values
+      .map((char, index) => {
+        const product = chars.indexOf(char) * (index % 2 !== 0 ? 2 : 1);
+        return Math.floor(product / chars.length) + (product % chars.length);
+      })
+      .reduce((prev, current) => {
+        return prev + current;
+      });
+    const checksum = (chars.length - (sum % chars.length)) % chars.length;
+    return chars[checksum] === lastChar;
+  }
 }

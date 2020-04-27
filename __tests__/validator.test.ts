@@ -162,3 +162,22 @@ describe('Aadhaar VID', () => {
     expect(Validator.aadhaarVID(value)).toBe(expected);
   });
 });
+
+describe('GST', () => {
+  const tests: [string, boolean][] = [
+    ['22ALJPT5243L1ZS', true],
+    ['18AABCT3518Q1ZV', true],
+    ['37AADCB2230M2ZR', true],
+
+    ['22ALJPT5243L1ZB', false],
+    ['38AABCT3518Q1ZV', false],
+    ['47AADCB2230M2ZR', false],
+    ['47AADCB2230M2ZRT', false],
+    ['47AADCB2230M2Z', false],
+    ['47AAD CB2230M2Z', false],
+    ['47AAD-CB2230M2Z', false],
+  ];
+  test.each(tests)(`Check %s => %s`, (value, expected) => {
+    expect(Validator.gst(value)).toBe(expected);
+  });
+});

@@ -182,3 +182,22 @@ let isValid = Validator.aadhaarVID('9876543210987659');
 isValid = Validator.aadhaarVID('6234897234982734');
 // isValid = false
 ```
+
+### GSTIN (Goods & Services Tax Identification Number)
+
+A GISTIN is a 15 digit alphanumeric code assigned to a business or person registered under the GST Act.
+
+#### Format
+* The first two characters are numerical series from `01` to `37` denoting state code.
+* The third to twelfth characters are [PAN](#pan-permanent-account-number) number of the GST registered entity.
+* The thirteenth character is a alphabet assigned based on the number of registration within a state.
+* The fourteenth character is `Z` by default.
+* The fifteenth character is a check codeand can be an alphabet or a number.
+
+```js
+let isValid = Validator.gst('22ALJPT5243L1ZS');
+// isValid = true
+
+isValid = Validator.gst('22ALJPT5243L1ZB');
+// isValid = false
+```
