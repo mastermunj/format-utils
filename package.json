@@ -21,6 +21,10 @@
     "validators",
     "validation"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mastermunj/format-utils.git"
+  },
   "license": "MIT",
   "author": "Munjal Dhamecha",
   "main": "dist/validator.js",
