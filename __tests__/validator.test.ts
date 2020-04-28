@@ -202,3 +202,16 @@ describe('Vehicle Registration Number', () => {
     expect(Validator.vehicleRegistration(value)).toBe(expected);
   });
 });
+
+describe('VPA', () => {
+  const tests: [string, boolean][] = [
+    ['amazing-uid@upi', true],
+    ['random9999@upi', true],
+
+    ['axisbank@bankaxis', false],
+    ['very-long-upi-id-or-vpa-should-not-pass-the-validation@upi', false],
+  ];
+  test.each(tests)(`Check %s => %s`, (value, expected) => {
+    expect(Validator.vpa(value)).toBe(expected);
+  });
+});

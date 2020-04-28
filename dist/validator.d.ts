@@ -1,3 +1,4 @@
+import { VpaValidationOptions } from './vpa';
 export declare class Validator {
     static mobile(value: string): boolean;
     static pincode(value: string | number): boolean;
@@ -12,4 +13,5 @@ export declare class Validator {
     static gst(value: string): boolean;
     static gstChecksum(value: string): boolean;
     static vehicleRegistration(value: string): boolean;
+    static vpa(value: string, options?: VpaValidationOptions): boolean;
 }

@@ -1,8 +1,8 @@
-# Format Utilities
+# Format Validation Utilities
 
 ## Introduction
 
-Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAR, UID and more!
+Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAR, GST and more!
 
 ## Installation
 
@@ -219,5 +219,29 @@ let isValid = Validator.vehicleRegistration('DL4CAF4943');
 // isValid = true
 
 isValid = Validator.vehicleRegistration('DL4CAF494G');
+// isValid = false
+```
+
+### VPA (Virtual Payment Address)
+
+A VPA / UPI (Unified Payment Interface) ID is a unique id generated for use of UPI in India.
+
+#### Format
+* VPA consists of alphabets, numbers, hyphen (`-`), underscore (`_`) and dot (`.`) as part of identification.
+* The identification part is followed by `@` sign.
+* The last part is the handle of the issuer bank or PSP (Payment Service Provider).
+* The maximum length of VPA is 50 characters.
+
+#### Options
+| Option  | Type | Default | Description |
+| ------------- | ------------- | ------------- | ------------- |
+| maxLength | number | 50 | Maximum length of the VPA address including `@` sign & the handle. |
+| handles | boolean \| string[] | false | Whether to do additional check of verifying the handle. <br/>When it is `true` the handle part is checked against default handles listed in [vpa-handles.json](./src/vpa-handles.json). <br/>When it is `string[]` the handle part is checked against merged list of default handles listed in [vpa-handles.json](./src/vpa-handles.json) and the ones given as input. |
+
+```js
+let isValid = Validator.vpa('amazing-uid@upi');
+// isValid = true
+
+isValid = Validator.vpa('with@at@upi');
 // isValid = false
 ```

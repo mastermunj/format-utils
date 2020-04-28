@@ -1,5 +1,6 @@
 import { Luhn } from './luhn';
 import { Verhoeff } from './verhoeff';
+import { VPA, VpaValidationOptions } from './vpa';
 
 export class Validator {
   static mobile(value: string): boolean {
@@ -72,5 +73,9 @@ export class Validator {
   static vehicleRegistration(value: string): boolean {
     const regex = /^[A-Z]{2}[\s-.]?[0-9]{1,2}[\s-.]?[0-9A-Z]{1,3}[\s-.]?[0-9]{1,4}$/i;
     return regex.test(value);
+  }
+
+  static vpa(value: string, options?: VpaValidationOptions): boolean {
+    return VPA.validate(value, options);
   }
 }

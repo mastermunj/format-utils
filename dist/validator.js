@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const luhn_1 = require("./luhn");
 const verhoeff_1 = require("./verhoeff");
+const vpa_1 = require("./vpa");
 class Validator {
     static mobile(value) {
         return /^[6789]\d{9}$/.test(value);
@@ -61,6 +62,9 @@ class Validator {
     static vehicleRegistration(value) {
         const regex = /^[A-Z]{2}[\s-.]?[0-9]{1,2}[\s-.]?[0-9A-Z]{1,3}[\s-.]?[0-9]{1,4}$/i;
         return regex.test(value);
+    }
+    static vpa(value, options) {
+        return vpa_1.VPA.validate(value, options);
     }
 }
 exports.Validator = Validator;
