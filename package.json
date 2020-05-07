@@ -1,7 +1,7 @@
 {
   "name": "format-utils",
   "version": "0.0.2",
-  "description": "Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAR, GST and more!",
+  "description": "Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAAR, GST and more!",
   "keywords": [
     "format validators",
     "mobile",
@@ -13,6 +13,7 @@
     "ESIC",
     "IMEI",
     "AADHAAR",
+    "AADHAR",
     "AADHAAR VID",
     "GST",
     "GSTIN",

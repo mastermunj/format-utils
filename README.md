@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAR, GST and more!
+Utilities for validating various formats of Indian system codes like Mobile, PAN, AADHAAR, GST and more!
 
 ## Installation
 
