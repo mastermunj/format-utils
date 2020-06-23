@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Verhoeff = void 0;
 class Verhoeff {
     static validate(value) {
         const digits = [...value.replace(/\s/g, '')]

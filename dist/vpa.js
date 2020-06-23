@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VPA = void 0;
 const ValidationOptionsDefaults = {
     maxLength: 50,
     handles: true,

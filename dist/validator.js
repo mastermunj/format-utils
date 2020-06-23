@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Validator = void 0;
 const luhn_1 = require("./luhn");
 const verhoeff_1 = require("./verhoeff");
 const vpa_1 = require("./vpa");

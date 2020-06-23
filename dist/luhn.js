@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Luhn = void 0;
 class Luhn {
     static validate(value) {
         const digits = [...value.replace(/\s/g, '')].reverse();
