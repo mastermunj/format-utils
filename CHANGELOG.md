@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/mastermunj/format-utils/compare/v0.0.4...v0.0.5) (2020-12-11)
+
+
+### Bug Fixes
+
+* copy vpa-handles.json file to dist ([ce5cff0](https://github.com/mastermunj/format-utils/commit/ce5cff006278e3cfb277f4b7c48b125bc48de6c4))
+
 ### [0.0.4](https://github.com/mastermunj/format-utils/compare/v0.0.3...v0.0.4) (2020-09-22)
 
 ### [0.0.3](https://github.com/mastermunj/format-utils/compare/v0.0.2...v0.0.3) (2020-05-07)
