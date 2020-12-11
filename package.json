@@ -34,6 +34,7 @@
   "main": "dist/validator.js",
   "scripts": {
     "build": "npm run clean && tsc --noEmitOnError",
+    "postbuild": "cpy src/*.json dist/",
     "build:watch": "npm run build -- --watch",
     "clean": "rimraf dist coverage",
     "lint": "eslint --ext .js,.ts .",
@@ -61,6 +62,7 @@
     "@types/node": "^14.0.1",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
+    "cpy-cli": "^3.1.1",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-jest": "^24.0.0",
