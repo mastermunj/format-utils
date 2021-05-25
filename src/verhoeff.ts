@@ -26,14 +26,10 @@ export class Verhoeff {
   static inverse = [0, 4, 3, 2, 1, 5, 6, 7, 8, 9];
 
   static validate(value: string): boolean {
-    const digits = [...value.replace(/\s/g, '')]
-      .reverse()
-      .map((digit) => parseInt(digit, 10));
+    const digits = [...value.replace(/\s/g, '')].reverse().map((digit) => parseInt(digit, 10));
 
     const checksum = digits.reduce((prev, current, index) => {
-      return Verhoeff.multiplication[prev][
-        Verhoeff.permutation[index % 8][current]
-      ];
+      return Verhoeff.multiplication[prev][Verhoeff.permutation[index % 8][current]];
     }, 0);
 
     return checksum === 0;

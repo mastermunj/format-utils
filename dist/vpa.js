@@ -15,9 +15,7 @@ class VPA {
         }
         if (options.handles) {
             const defaultHandles = VPA.getDefaultVpaHandles();
-            options.handles = (options.handles === true
-                ? defaultHandles
-                : [...options.handles, ...defaultHandles]);
+            options.handles = (options.handles === true ? defaultHandles : [...options.handles, ...defaultHandles]);
             const handle = value.split('@')[1];
             isValidFormat = options.handles.indexOf(handle) >= 0;
         }

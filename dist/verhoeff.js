@@ -3,9 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Verhoeff = void 0;
 class Verhoeff {
     static validate(value) {
-        const digits = [...value.replace(/\s/g, '')]
-            .reverse()
-            .map((digit) => parseInt(digit, 10));
+        const digits = [...value.replace(/\s/g, '')].reverse().map((digit) => parseInt(digit, 10));
         const checksum = digits.reduce((prev, current, index) => {
             return Verhoeff.multiplication[prev][Verhoeff.permutation[index % 8][current]];
         }, 0);

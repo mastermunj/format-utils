@@ -15,17 +15,16 @@ export class VPA {
     options = Object.assign({}, ValidationOptionsDefaults, options);
 
     const regex = /^[a-z0-9_.-]{3,}@[a-z]{3,}$/i;
-    let isValidFormat =
-      regex.test(value) && value.length <= (options.maxLength as number);
+    let isValidFormat = regex.test(value) && value.length <= (options.maxLength as number);
     if (!isValidFormat) {
       return false;
     }
 
     if (options.handles) {
       const defaultHandles = VPA.getDefaultVpaHandles();
-      options.handles = (options.handles === true
-        ? defaultHandles
-        : [...options.handles, ...defaultHandles]) as string[];
+      options.handles = (
+        options.handles === true ? defaultHandles : [...options.handles, ...defaultHandles]
+      ) as string[];
       const handle = value.split('@')[1];
       isValidFormat = options.handles.indexOf(handle) >= 0;
     }

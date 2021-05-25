@@ -42,18 +42,14 @@
     "release": "standard-version",
     "release:mock": "npm run release -- --dry-run",
     "test": "jest --detectOpenHandles --coverage",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "package.json": [
-      "sort-package-json"
-    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.0",
@@ -63,6 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "cpy-cli": "^3.1.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-jest": "^24.0.0",
@@ -70,7 +67,7 @@
     "husky": "^6.0.0",
     "jest": "^26.0.1",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.0.5",
+    "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.42.1",
     "standard-version": "^9.0.0",
