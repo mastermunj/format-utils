@@ -1,4 +1,4 @@
-export declare type VpaValidationOptions = {
+export type VpaValidationOptions = {
     maxLength?: number;
     handles?: boolean | string[];
 };
