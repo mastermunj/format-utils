@@ -58,7 +58,7 @@
     "@types/node": "^20.1.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
-    "cpy-cli": "^4.2.0",
+    "cpy-cli": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
