@@ -1,10 +1,14 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VPA = void 0;
 const ValidationOptionsDefaults = {
     maxLength: 50,
     handles: true,
 };
+const vpa_handles_json_1 = __importDefault(require("./vpa-handles.json"));
 class VPA {
     static validate(value, options) {
         options = Object.assign({}, ValidationOptionsDefaults, options);
@@ -14,18 +18,11 @@ class VPA {
             return false;
         }
         if (options.handles) {
-            const defaultHandles = VPA.getDefaultVpaHandles();
-            options.handles = (options.handles === true ? defaultHandles : [...options.handles, ...defaultHandles]);
+            options.handles = (options.handles === true ? vpa_handles_json_1.default : [...options.handles, ...vpa_handles_json_1.default]);
             const handle = value.split('@')[1];
             isValidFormat = options.handles.indexOf(handle) >= 0;
         }
         return isValidFormat;
-    }
-    static getDefaultVpaHandles() {
-        if (VPA.defaultVpaHandles === undefined) {
-            VPA.defaultVpaHandles = require('./vpa-handles.json');
-        }
-        return VPA.defaultVpaHandles;
     }
 }
 exports.VPA = VPA;

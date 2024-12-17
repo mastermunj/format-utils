@@ -8,6 +8,8 @@ const ValidationOptionsDefaults: VpaValidationOptions = {
   handles: true,
 };
 
+import defaultVpaHandles from './vpa-handles.json';
+
 export class VPA {
   static defaultVpaHandles: string[] | undefined = undefined;
 
@@ -21,20 +23,12 @@ export class VPA {
     }
 
     if (options.handles) {
-      const defaultHandles = VPA.getDefaultVpaHandles();
       options.handles = (
-        options.handles === true ? defaultHandles : [...options.handles, ...defaultHandles]
+        options.handles === true ? defaultVpaHandles : [...options.handles, ...defaultVpaHandles]
       ) as string[];
       const handle = value.split('@')[1];
       isValidFormat = options.handles.indexOf(handle) >= 0;
     }
     return isValidFormat;
-  }
-
-  static getDefaultVpaHandles(): string[] {
-    if (VPA.defaultVpaHandles === undefined) {
-      VPA.defaultVpaHandles = require('./vpa-handles.json');
-    }
-    return VPA.defaultVpaHandles as string[];
   }
 }
