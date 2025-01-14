@@ -61,7 +61,7 @@
     "cpy-cli": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.17.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.7",
