@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import { VPA } from '../src/vpa';
 
 describe('VPA', () => {

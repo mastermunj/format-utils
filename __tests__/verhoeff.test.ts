@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import { Verhoeff } from '../src/verhoeff';
 
 describe('Verhoeff', () => {
