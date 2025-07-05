@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/mastermunj/format-utils/compare/v0.0.11...v0.0.12) (2025-07-05)
+
+
+### Bug Fixes
+
+* **vpa-handles.json:** updated UPI handles as per official sources ([111212c](https://github.com/mastermunj/format-utils/commit/111212c19271f97ec724bfb17fd5d4751351d316)), closes [#1779](https://github.com/mastermunj/format-utils/issues/1779)
+
 ### [0.0.11](https://github.com/mastermunj/format-utils/compare/v0.0.10...v0.0.11) (2025-03-18)
 
 ### [0.0.10](https://github.com/mastermunj/format-utils/compare/v0.0.9...v0.0.10) (2024-12-17)
