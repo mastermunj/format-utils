@@ -19,6 +19,10 @@ export class Validator {
     return /^[A-Z]{4}\d{5}[A-Z]$/i.test(value);
   }
 
+  static cin(value: string): boolean {
+    return /^[LU]\d{5}[A-Z]{2}\d{4}[A-Z]{3}\d{6}$/.test(value.toUpperCase());
+  }
+
   static uan(value: string): boolean {
     return /^\d{12}$/.test(value);
   }
