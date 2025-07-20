@@ -98,6 +98,27 @@ isValid = Validator.tan('RAJA999991');
 // isValid = false
 ```
 
+### CIN (Corporate Identification Number)
+
+A CIN is a 21-digit alphanumeric code assigned by the Registrar of Companies (RoC) to every company registered in India.
+
+#### Format
+
+- The first character is `L` or `U` (Listing status).
+- The second to sixth characters are sequential numbers running from `00001` to `99999` (Industry code).
+- The seventh and eighth characters consist of two alphabetic characters (State code).
+- The ninth to twelfth characters are numeric, representing year of incorporation.
+- The thirteenth to fifteenth characters are alphabetic, representing the type of company.
+- The sixteenth to twenty-first characters are sequential numbers running from `00001` to `99999` (Registration number).
+
+```js
+let isValid = Validator.cin('L12345MH2000PLC123456');
+// isValid = true
+
+isValid = Validator.cin('U12345BR2020PTC12A456');
+// isValid = false
+```
+
 ### UAN (Universal Account Number)
 
 A UAN is a 12 digit numberic code that is issued to member of the Employees’ Provident Fund Organisation (EPFO).
