@@ -20,7 +20,7 @@ export class Validator {
   }
 
   static cin(value: string): boolean {
-    return /^[LU]\d{5}[A-Z]{2}\d{4}[A-Z]{3}\d{6}$/.test(value.toUpperCase());
+    return /^[LU]\d{5}[A-Z]{2}\d{4}[A-Z]{3}\d{6}$/.test(value);
   }
 
   static uan(value: string): boolean {
