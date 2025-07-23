@@ -18,7 +18,7 @@ class Validator {
         return /^[A-Z]{4}\d{5}[A-Z]$/i.test(value);
     }
     static cin(value) {
-        return /^[LU]\d{5}[A-Z]{2}\d{4}[A-Z]{3}\d{6}$/.test(value);
+        return /^[LU]\d{5}[A-Z]{2}\d{4}[A-Z]{3}\d{6}$/i.test(value);
     }
     static uan(value) {
         return /^\d{12}$/.test(value);
