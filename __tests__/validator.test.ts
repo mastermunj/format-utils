@@ -67,6 +67,18 @@ describe('TAN', () => {
   });
 });
 
+describe('CIN', () => {
+  const tests: [string, boolean][] = [
+    ['L12345MH2000PLC123456', true],
+    ['U12345BR2020LLC123456', true],
+    ['U12345BR2020PTC12A456', false],
+    ['H12345BR2020LLC123456', false],
+  ];
+  test.each(tests)(`Check %s => %s`, (value, expected) => {
+    expect(Validator.cin(value)).toBe(expected);
+  });
+});
+
 describe('UAN', () => {
   const tests: [string, boolean][] = [
     ['987654321098', true],

@@ -4,6 +4,7 @@ export declare class Validator {
     static pincode(value: string | number): boolean;
     static pan(value: string): boolean;
     static tan(value: string): boolean;
+    static cin(value: string): boolean;
     static uan(value: string): boolean;
     static ifsc(value: string): boolean;
     static esic(value: string): boolean;
