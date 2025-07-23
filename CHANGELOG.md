@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/mastermunj/format-utils/compare/v0.0.12...v0.0.13) (2025-07-23)
+
+
+### Features
+
+* added basic CIN validator ([046f781](https://github.com/mastermunj/format-utils/commit/046f7818c04151d4ce8b02e7910938e02754fe74))
+
 ### [0.0.12](https://github.com/mastermunj/format-utils/compare/v0.0.11...v0.0.12) (2025-07-05)
 
 
