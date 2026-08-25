@@ -72,7 +72,7 @@
     "rimraf": "^6.0.1",
     "sort-package-json": "^4.0.0",
     "standard-version": "^9.5.0",
-    "typescript": "^6.0.2",
+    "typescript": "^7.0.2",
     "vitest": "^4.1.10"
   }
 }
