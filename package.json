@@ -73,6 +73,6 @@
     "sort-package-json": "^4.0.0",
     "standard-version": "^9.5.0",
     "typescript": "^6.0.2",
-    "vitest": "^4.1.10"
+    "vitest": "^5.0.4"
   }
 }
